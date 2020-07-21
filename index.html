@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit API App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <nav class='text-light bg-primary'>
+       <div class="container ">
+        <h1 class="p-2 ">Reddit Search App</h1>
+       </div>
+
+    </nav>
+    <div id="all"class="container mt-4">
+
+        <div id="first" class="search card card-body bg-light mb-2">
+            <form class='form-group'>
+                
+                <!---  search field-->
+                <div class="form-group">
+                    <h5>Search Reddit:</h5>
+                    <input type="text" class="form-control" autocomplete="off" id='term' placeholder="Search Term...">
+                  </div>
+
+
+                  <!--- Radio buttons-->
+
+
+                    <div class="form-check form-check-inline mb-2">
+                        Sort By:
+                        <input class="form-check-input ml-3" value='relevance' type="radio" name="radio"   checked>
+                        <label class="form-check-label">
+                          Relevance
+                        </label >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" value='new' type="radio" name="radio"   >
+                        <label class="form-check-label">
+                          New
+                        </label >
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" value='hot' type="radio" name="radio"   >
+                        <label class="form-check-label">
+                          Hot
+                        </label >
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" value='top' type="radio" name="radio"   >
+                        <label class="form-check-label">
+                          Top
+                        </label >
+                      </div>
+               
+
+
+                  <!-- drop down -->
+                      <h5>Result Limit:</h5>
+                  <select class="form-control" id="select">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+
+                </select>
+
+                <button id="search" class="form-control btn btn-dark btn-block mt-4">Search</button>
+                  
+
+
+            </form>
+        </div>
+
+
+        <!---Results-->
+        <div id="results" class="mt-4"></div>
+    </div>
+    
+<script src="app.js"></script>
+    
+</body>
+</html>
